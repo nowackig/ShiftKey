@@ -36,8 +36,8 @@ You are being asked to:
 
 ### Additional information
 
-- Miles - Driven miles from this trip.
-- Miles Balance - Sum of all miles driven by this car after this trip.
+- Miles - Driven miles from the trip.
+- Miles Balance - Total Sum of miles driven by the car.
 
 ---
 
