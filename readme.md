@@ -6,18 +6,17 @@
 
 ### Overview
 
-In this coding simulation you are being asked to develop the backend for ‘Trax’ - a milage tracking application
-developed using Laravel 9, Vue.js 2 and Vuetify.js.
+In this coding simulation you are being asked to develop the backend for “Trax”. Trax is a hypothetical web application that allows its users to track the number of miles traveled in their cars.
 
 The front-end of the application has already been developed and consists of the following features:
 
 - User registration and authentication (Note: No back-end work is required for user management. This work is already
   complete.)
-- Ability for a logged in user to add a car to Trax
-- Ability for a logged in user to remove a car from Trax
-- Ability for a logged in user to view a list of all their cars
-- Ability for a logged in user to add a trip to Trax specifying which car was used.
-- Ability for a logged in user to a view a list of all their trips
+- Ability for a logged-in user to add car to Trax
+- Ability for a logged-in user to remove car from Trax
+- Ability for a logged-in user to view a list of all theirs cars
+- Ability for a logged-in user to add trip to Trax and specify which car was used.
+- Ability for a logged-in user to a view a list of all their trips
 
 The frontend of the application currently makes requests to a set of mock endpoints implemented in-line in
 /routes/api.php, with each mock endpoint sending back statically defined JSON objects. It is your task to develop a
@@ -25,19 +24,20 @@ functional API for Trax.
 You are being asked to:
 
 - Design the Data-Model for Trax and create corresponding Database Migrations.
-- Implement the Eloquent Model Layer
+- Implement the Eloquent Model Layer.
 - Design a RESTful API to be consumed by the front-end using the mock end-points as a guide for the expected data
   format.
 - Implement the Controller(s) for the API and leverage them in the routes.
-    - Entrypoint for list of Trips should be written in clean SQL or using Query Builder
-- Remember to unit test your code
+    - Entrypoint for list of Trips should be written in clean SQL or using Query Builder (not Eloquent).
+- Add at least 2 unit and 2 feature tests.
 - Update the frontend’s /resources/assets/js/traxAPI.js file so that the frontend makes uses of your new API. Ideally,
   you should showcase your Laravel experience by using as many Laravel specific features as possible. For example:
   Scopes, Resources, Policies, Requests, etc.
 
-### Miles Balance
+### Additional information
 
-Miles Balance is the sum of the miles driven by the car after the trip.
+- Miles - Driven miles from this trip.
+- Miles Balance - Sum of all miles driven by this car after this trip.
 
 ---
 
