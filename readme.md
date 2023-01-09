@@ -82,6 +82,6 @@ Or to watch for any JS changes you can run
 docker exec -it trax_php_1 npm run watch
 ```
 
-Commit your changes locally and when finished, publish your repo on your public bitbucket or github account.
+Commit your changes locally and when finished, publish your repo on your public bitbucket or github account. All changes in the code **must** be presented as Pull Request.
 
 **GOOD LUCK!**
