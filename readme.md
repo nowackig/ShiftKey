@@ -60,10 +60,10 @@ Setup your working environment by executing the following commands:
 cd <trax repo directory>
 docker-compose build
 docker-compose up
-docker exec -it trax_php_1 composer install
-docker exec -it trax_php_1 npm install
-docker exec -it trax_php_1 npm run dev
-docker exec -it trax_php_1 php artisan migrate
+docker exec -it trax_php composer install
+docker exec -it trax_php npm install
+docker exec -it trax_php npm run dev
+docker exec -it trax_php php artisan migrate
 ```
 
 At this point you can open http://localhost:8080/ and start using the mock-API backed application. As a first step, you
@@ -73,13 +73,13 @@ Should you make changes to
 any of the JS files, such as /resources/assets/js/traxAPI.js, you can run the following in order to compile your changes
 
 ```
-docker exec -it trax_php_1 npm run dev
+docker exec -it trax_php npm run dev
 ```
 
 Or to watch for any JS changes you can run
 
 ```
-docker exec -it trax_php_1 npm run watch
+docker exec -it trax_php npm run watch
 ```
 
 Commit your changes locally and when finished, publish your repo on your public bitbucket or github account. All changes in the code **must** be presented as Pull Request.
