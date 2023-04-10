@@ -20,6 +20,15 @@ RUN apt-get install -y zlib1g-dev libpq-dev git libicu-dev libxml2-dev libzip-de
     && pecl install imagick \
     && docker-php-ext-enable imagick
 
+# Install xdebug if enabled
+ARG PHP_XDEBUG_ENABLED
+RUN if [ "$PHP_XDEBUG_ENABLED" = 1 ]; then \
+        pecl install xdebug && \
+        docker-php-ext-enable xdebug \
+    ; fi
+
+COPY /docker/etc/php/conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
 # Install composer.
 RUN curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
 

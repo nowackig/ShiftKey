@@ -17,13 +17,25 @@
             <directory suffix="Test.php">./tests/Feature</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./app</directory>
-        </whitelist>
-    </filter>
+    <coverage>
+        <include>
+            <directory suffix=".php">app</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">app/Providers</directory>
+            <directory suffix=".php">app/Http/Middleware</directory>
+            <directory suffix=".php">app/Exceptions</directory>
+            <file>app/Console/Kernel.php</file>
+            <file>app/Http/Kernel.php</file>
+        </exclude>
+        <report>
+            <text outputFile="php://stdout"/>
+            <cobertura outputFile="coverage.cobertura.xml"/>
+        </report>
+    </coverage>
     <php>
         <env name="APP_ENV" value="testing"/>
+        <env name="DB_CONNECTION" value="testing"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>

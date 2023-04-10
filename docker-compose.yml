@@ -22,6 +22,10 @@ services:
     build:
       context: .
       dockerfile: docker/php/Dockerfile
+      args:
+        PHP_XDEBUG_ENABLED: 1
+    environment:
+      - PHP_IDE_CONFIG=serverName=trax_php
     container_name: trax_php
     restart: on-failure
     ports:
@@ -50,7 +54,7 @@ services:
         aliases:
           - nginx
     volumes:
-      - ./:/var/www/trax
+      - ./:/var/www
       - ./docker/logs/nginx/:/var/log/nginx:cached
     environment:
       - NGINX_DEV_HOST=${TRAX_HOST}

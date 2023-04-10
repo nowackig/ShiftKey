@@ -78,6 +78,12 @@ return [
             'prefix' => '',
         ],
 
+        'testing' => [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+        ],
     ],
 
     /*
