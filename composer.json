@@ -51,6 +51,11 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "static:analyze": [
+            "tools/vendor/bin/php-cs-fixer fix --dry-run -vvv --diff",
+            "tools/vendor/bin/phpstan analyse -c phpstan.neon --memory-limit 16G",
+            "tools/vendor/bin/rector process --dry-run"
         ]
     },
     "config": {

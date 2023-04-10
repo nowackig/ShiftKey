@@ -1,0 +1,16 @@
+includes:
+    - ./tools/vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    excludePaths:
+        - app/Exceptions
+        - app/Http/Controllers/Auth
+    paths:
+        - app
+
+    # The level 9 is the highest level
+    level: 8
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    treatPhpDocTypesAsCertain: false

@@ -66,7 +66,7 @@ export default {
             let car = response.data.data[i];
             cars.push({
               text: car.year + ' ' + car.make + ' ' + car.model,
-              value: car.id
+              value: car.uuid
             });
           }
           this.cars = cars;
@@ -79,7 +79,7 @@ export default {
       if (this.$refs.form.validate()) {
         axios.post(traxAPI.addTripEndpoint(), {
           date: this.date.toISOString(),
-          car_id: this.car,
+          car_uuid: this.car,
           miles: this.miles
         })
           .then(response => {

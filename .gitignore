@@ -11,6 +11,9 @@ npm-debug.log
 yarn-error.log
 public/js/app.js
 public/mix-manifest.json
+coverage.cobertura.xml
+*.cache
 
 #docker
 /docker/logs
+/tools/vendor/

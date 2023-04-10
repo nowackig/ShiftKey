@@ -15,7 +15,7 @@
           class="elevation-1"
         >
           <template slot="items" slot-scope="props">
-            <tr @click="rowClicked(props.item.id)">
+            <tr @click="rowClicked(props.item.uuid)">
               <td>{{ props.item.year }}</td>
               <td>{{ props.item.make }}</td>
               <td>{{ props.item.model }}</td>
